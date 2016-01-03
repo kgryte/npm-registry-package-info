@@ -1,0 +1,23 @@
+{
+	"boolean": [
+		"help",
+		"version",
+		"latest"
+	],
+	"string": [
+		"port",
+		"registry",
+		"protocol"
+	],
+	"alias": {
+		"help": [
+			"h"
+		],
+		"version": [
+			"V"
+		],
+		"port": [
+			"p"
+		]
+	}
+}

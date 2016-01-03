@@ -1,0 +1,857 @@
+{
+  "_id": "dstructs-matrix",
+  "_rev": "9-0abaf0fedef5d5ef0daf7f1b44f53c66",
+  "name": "dstructs-matrix",
+  "description": "Matrices.",
+  "dist-tags": {
+    "latest": "2.1.2"
+  },
+  "versions": {
+    "0.0.0": {
+      "name": "dstructs-matrix",
+      "version": "0.0.0",
+      "description": "Matrices.",
+      "author": {
+        "name": "Athan Reines",
+        "email": "kgryte@gmail.com"
+      },
+      "contributors": [
+        {
+          "name": "Athan Reines",
+          "email": "kgryte@gmail.com"
+        }
+      ],
+      "scripts": {
+        "test": "mocha",
+        "test-cov": "istanbul cover ./node_modules/.bin/_mocha --dir ./reports/coverage -- -R spec",
+        "coveralls": "istanbul cover ./node_modules/.bin/_mocha --dir ./reports/coveralls/coverage --report lcovonly -- -R spec && cat ./reports/coveralls/coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./reports/coveralls"
+      },
+      "main": "./lib",
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/dstructs/matrix.git"
+      },
+      "keywords": [
+        "compute.io",
+        "compute",
+        "computation",
+        "mathematics",
+        "math",
+        "linear",
+        "algebra",
+        "two dimensional",
+        "2d",
+        "matrix",
+        "matrices",
+        "data",
+        "structure",
+        "data structure",
+        "array",
+        "typed",
+        "dstructs"
+      ],
+      "bugs": {
+        "url": "https://github.com/dstructs/matrix/issues"
+      },
+      "dependencies": {
+        "compute-cast-arrays": "^1.0.0",
+        "compute-dtype": "^1.0.0",
+        "compute-indexspace": "^1.0.1",
+        "validate.io-array": "^1.0.6",
+        "validate.io-contains": "^1.0.0",
+        "validate.io-function": "^1.0.2",
+        "validate.io-integer-primitive": "^1.0.0",
+        "validate.io-nonnegative-integer": "^1.0.0",
+        "validate.io-nonnegative-integer-array": "^1.0.1",
+        "validate.io-number-primitive": "^1.0.0",
+        "validate.io-string-primitive": "^1.0.0"
+      },
+      "devDependencies": {
+        "chai": "2.x.x",
+        "coveralls": "^2.11.1",
+        "istanbul": "^0.3.0",
+        "jshint": "2.x.x",
+        "jshint-stylish": "^1.0.0",
+        "mocha": "2.x.x",
+        "type-name": "^1.0.1"
+      },
+      "license": "MIT",
+      "gitHead": "dcad1722ff23f543e08ad73b1692062a8069ccb0",
+      "homepage": "https://github.com/dstructs/matrix#readme",
+      "_id": "dstructs-matrix@0.0.0",
+      "_shasum": "c9cb0f20108c31271f3f780e50eabeb29151f02b",
+      "_from": ".",
+      "_npmVersion": "2.8.3",
+      "_nodeVersion": "0.10.29",
+      "_npmUser": {
+        "name": "kgryte",
+        "email": "kgryte@gmail.com"
+      },
+      "dist": {
+        "shasum": "c9cb0f20108c31271f3f780e50eabeb29151f02b",
+        "tarball": "http://registry.npmjs.org/dstructs-matrix/-/dstructs-matrix-0.0.0.tgz"
+      },
+      "maintainers": [
+        {
+          "name": "kgryte",
+          "email": "kgryte@gmail.com"
+        }
+      ],
+      "directories": {}
+    },
+    "1.0.0": {
+      "name": "dstructs-matrix",
+      "version": "1.0.0",
+      "description": "Matrices.",
+      "author": {
+        "name": "Athan Reines",
+        "email": "kgryte@gmail.com"
+      },
+      "contributors": [
+        {
+          "name": "Athan Reines",
+          "email": "kgryte@gmail.com"
+        }
+      ],
+      "scripts": {
+        "test": "mocha",
+        "test-cov": "istanbul cover ./node_modules/.bin/_mocha --dir ./reports/coverage -- -R spec",
+        "coveralls": "istanbul cover ./node_modules/.bin/_mocha --dir ./reports/coveralls/coverage --report lcovonly -- -R spec && cat ./reports/coveralls/coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./reports/coveralls"
+      },
+      "main": "./lib",
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/dstructs/matrix.git"
+      },
+      "keywords": [
+        "compute.io",
+        "compute",
+        "computation",
+        "mathematics",
+        "math",
+        "linear",
+        "algebra",
+        "two dimensional",
+        "2d",
+        "matrix",
+        "matrices",
+        "data",
+        "structure",
+        "data structure",
+        "array",
+        "typed",
+        "dstructs"
+      ],
+      "bugs": {
+        "url": "https://github.com/dstructs/matrix/issues"
+      },
+      "dependencies": {
+        "compute-cast-arrays": "^1.0.0",
+        "compute-dtype": "^1.0.0",
+        "compute-indexspace": "^1.0.1",
+        "validate.io-array": "^1.0.6",
+        "validate.io-contains": "^1.0.0",
+        "validate.io-function": "^1.0.2",
+        "validate.io-integer-primitive": "^1.0.0",
+        "validate.io-nonnegative-integer": "^1.0.0",
+        "validate.io-nonnegative-integer-array": "^1.0.1",
+        "validate.io-number-primitive": "^1.0.0",
+        "validate.io-string-primitive": "^1.0.0"
+      },
+      "devDependencies": {
+        "chai": "2.x.x",
+        "coveralls": "^2.11.1",
+        "istanbul": "^0.3.0",
+        "jshint": "2.x.x",
+        "jshint-stylish": "^1.0.0",
+        "mocha": "2.x.x",
+        "type-name": "^1.0.1"
+      },
+      "license": "MIT",
+      "gitHead": "4ebc775e116470c69f958c93740e99a11d52bbcb",
+      "homepage": "https://github.com/dstructs/matrix#readme",
+      "_id": "dstructs-matrix@1.0.0",
+      "_shasum": "f9aa4fdc8b78f9f93bb49997909ae779d1782057",
+      "_from": ".",
+      "_npmVersion": "2.8.3",
+      "_nodeVersion": "0.10.29",
+      "_npmUser": {
+        "name": "kgryte",
+        "email": "kgryte@gmail.com"
+      },
+      "dist": {
+        "shasum": "f9aa4fdc8b78f9f93bb49997909ae779d1782057",
+        "tarball": "http://registry.npmjs.org/dstructs-matrix/-/dstructs-matrix-1.0.0.tgz"
+      },
+      "maintainers": [
+        {
+          "name": "kgryte",
+          "email": "kgryte@gmail.com"
+        }
+      ],
+      "directories": {}
+    },
+    "2.0.0": {
+      "name": "dstructs-matrix",
+      "version": "2.0.0",
+      "description": "Matrices.",
+      "author": {
+        "name": "Athan Reines",
+        "email": "kgryte@gmail.com"
+      },
+      "contributors": [
+        {
+          "name": "Athan Reines",
+          "email": "kgryte@gmail.com"
+        }
+      ],
+      "scripts": {
+        "test": "mocha",
+        "test-cov": "istanbul cover ./node_modules/.bin/_mocha --dir ./reports/coverage -- -R spec",
+        "coveralls": "istanbul cover ./node_modules/.bin/_mocha --dir ./reports/coveralls/coverage --report lcovonly -- -R spec && cat ./reports/coveralls/coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./reports/coveralls"
+      },
+      "main": "./lib",
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/dstructs/matrix.git"
+      },
+      "keywords": [
+        "compute.io",
+        "compute",
+        "computation",
+        "mathematics",
+        "math",
+        "linear",
+        "algebra",
+        "two dimensional",
+        "2d",
+        "matrix",
+        "matrices",
+        "data",
+        "structure",
+        "data structure",
+        "array",
+        "typed",
+        "dstructs"
+      ],
+      "bugs": {
+        "url": "https://github.com/dstructs/matrix/issues"
+      },
+      "dependencies": {
+        "compute-cast-arrays": "^1.0.0",
+        "compute-dtype": "^1.0.0",
+        "compute-indexspace": "^1.0.1",
+        "validate.io-array": "^1.0.6",
+        "validate.io-contains": "^1.0.0",
+        "validate.io-function": "^1.0.2",
+        "validate.io-integer-primitive": "^1.0.0",
+        "validate.io-nonnegative-integer": "^1.0.0",
+        "validate.io-nonnegative-integer-array": "^1.0.1",
+        "validate.io-number-primitive": "^1.0.0",
+        "validate.io-string-primitive": "^1.0.0"
+      },
+      "devDependencies": {
+        "chai": "2.x.x",
+        "coveralls": "^2.11.1",
+        "istanbul": "^0.3.0",
+        "jshint": "2.x.x",
+        "jshint-stylish": "^1.0.0",
+        "mocha": "2.x.x",
+        "type-name": "^1.0.1"
+      },
+      "license": "MIT",
+      "gitHead": "c595885a64c312fa91b51a54e876ab80cefb08ce",
+      "homepage": "https://github.com/dstructs/matrix#readme",
+      "_id": "dstructs-matrix@2.0.0",
+      "_shasum": "40d48ad8ba1ff4cdd37c193b0e6e7db66b58b829",
+      "_from": ".",
+      "_npmVersion": "2.8.3",
+      "_nodeVersion": "0.10.29",
+      "_npmUser": {
+        "name": "kgryte",
+        "email": "kgryte@gmail.com"
+      },
+      "dist": {
+        "shasum": "40d48ad8ba1ff4cdd37c193b0e6e7db66b58b829",
+        "tarball": "http://registry.npmjs.org/dstructs-matrix/-/dstructs-matrix-2.0.0.tgz"
+      },
+      "maintainers": [
+        {
+          "name": "kgryte",
+          "email": "kgryte@gmail.com"
+        }
+      ],
+      "directories": {}
+    },
+    "2.0.1": {
+      "name": "dstructs-matrix",
+      "version": "2.0.1",
+      "description": "Matrices.",
+      "author": {
+        "name": "Athan Reines",
+        "email": "kgryte@gmail.com"
+      },
+      "contributors": [
+        {
+          "name": "Athan Reines",
+          "email": "kgryte@gmail.com"
+        },
+        {
+          "name": "Philipp Burckhardt",
+          "email": "pburckhardt@outlook.com"
+        }
+      ],
+      "scripts": {
+        "test": "mocha",
+        "test-cov": "istanbul cover ./node_modules/.bin/_mocha --dir ./reports/coverage -- -R spec",
+        "codecov": "istanbul cover ./node_modules/.bin/_mocha --dir ./reports/codecov/coverage --report lcovonly -- -R spec && cat ./reports/codecov/coverage/lcov.info | codecov && rm -rf ./reports/codecov"
+      },
+      "main": "./lib",
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/dstructs/matrix.git"
+      },
+      "keywords": [
+        "compute.io",
+        "compute",
+        "computation",
+        "mathematics",
+        "math",
+        "linear",
+        "algebra",
+        "two dimensional",
+        "2d",
+        "matrix",
+        "matrices",
+        "data",
+        "structure",
+        "data structure",
+        "array",
+        "typed",
+        "dstructs"
+      ],
+      "bugs": {
+        "url": "https://github.com/dstructs/matrix/issues"
+      },
+      "dependencies": {
+        "compute-cast-arrays": "^1.0.0",
+        "compute-dtype": "^1.0.0",
+        "compute-indexspace": "^1.0.1",
+        "validate.io-array": "^1.0.6",
+        "validate.io-contains": "^1.0.0",
+        "validate.io-function": "^1.0.2",
+        "validate.io-integer-primitive": "^1.0.0",
+        "validate.io-nan": "^1.0.3",
+        "validate.io-nonnegative-integer": "^1.0.0",
+        "validate.io-nonnegative-integer-array": "^1.0.1",
+        "validate.io-number-primitive": "^1.0.0",
+        "validate.io-string-primitive": "^1.0.0"
+      },
+      "devDependencies": {
+        "chai": "3.x.x",
+        "codecov": "^1.0.1",
+        "istanbul": "^0.3.0",
+        "jshint": "2.x.x",
+        "jshint-stylish": "2.x.x",
+        "mocha": "2.x.x",
+        "type-name": "^1.0.1",
+        "validate.io-typed-array": "^1.0.0"
+      },
+      "license": "MIT",
+      "gitHead": "9e8b8ba65133212a220beeb496fcc7df3088bce7",
+      "homepage": "https://github.com/dstructs/matrix#readme",
+      "_id": "dstructs-matrix@2.0.1",
+      "_shasum": "e56f05011bc2ba50611ef9ca32305e0d1e5665e4",
+      "_from": ".",
+      "_npmVersion": "2.8.3",
+      "_nodeVersion": "0.12.7",
+      "_npmUser": {
+        "name": "kgryte",
+        "email": "kgryte@gmail.com"
+      },
+      "dist": {
+        "shasum": "e56f05011bc2ba50611ef9ca32305e0d1e5665e4",
+        "tarball": "http://registry.npmjs.org/dstructs-matrix/-/dstructs-matrix-2.0.1.tgz"
+      },
+      "maintainers": [
+        {
+          "name": "kgryte",
+          "email": "kgryte@gmail.com"
+        }
+      ],
+      "directories": {}
+    },
+    "2.0.2": {
+      "name": "dstructs-matrix",
+      "version": "2.0.2",
+      "description": "Matrices.",
+      "author": {
+        "name": "Athan Reines",
+        "email": "kgryte@gmail.com"
+      },
+      "contributors": [
+        {
+          "name": "Athan Reines",
+          "email": "kgryte@gmail.com"
+        },
+        {
+          "name": "Philipp Burckhardt",
+          "email": "pburckhardt@outlook.com"
+        }
+      ],
+      "scripts": {
+        "test": "mocha",
+        "test-cov": "istanbul cover ./node_modules/.bin/_mocha --dir ./reports/coverage -- -R spec",
+        "codecov": "istanbul cover ./node_modules/.bin/_mocha --dir ./reports/codecov/coverage --report lcovonly -- -R spec && cat ./reports/codecov/coverage/lcov.info | codecov && rm -rf ./reports/codecov"
+      },
+      "main": "./lib",
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/dstructs/matrix.git"
+      },
+      "keywords": [
+        "compute.io",
+        "compute",
+        "computation",
+        "mathematics",
+        "math",
+        "linear",
+        "algebra",
+        "two dimensional",
+        "2d",
+        "matrix",
+        "matrices",
+        "data",
+        "structure",
+        "data structure",
+        "array",
+        "typed",
+        "dstructs"
+      ],
+      "bugs": {
+        "url": "https://github.com/dstructs/matrix/issues"
+      },
+      "dependencies": {
+        "compute-cast-arrays": "^1.0.0",
+        "compute-dtype": "^1.0.0",
+        "compute-indexspace": "^1.0.1",
+        "validate.io-array": "^1.0.6",
+        "validate.io-contains": "^1.0.0",
+        "validate.io-function": "^1.0.2",
+        "validate.io-integer-primitive": "^1.0.0",
+        "validate.io-nan": "^1.0.3",
+        "validate.io-nonnegative-integer": "^1.0.0",
+        "validate.io-nonnegative-integer-array": "^1.0.1",
+        "validate.io-number-primitive": "^1.0.0",
+        "validate.io-string-primitive": "^1.0.0"
+      },
+      "devDependencies": {
+        "chai": "3.x.x",
+        "codecov": "^1.0.1",
+        "istanbul": "^0.3.0",
+        "jshint": "2.x.x",
+        "jshint-stylish": "2.x.x",
+        "mocha": "2.x.x",
+        "type-name": "^1.0.1",
+        "validate.io-typed-array": "^1.0.0"
+      },
+      "license": "MIT",
+      "gitHead": "46364613774103ff231186a882c1be2987d01a21",
+      "homepage": "https://github.com/dstructs/matrix#readme",
+      "_id": "dstructs-matrix@2.0.2",
+      "_shasum": "e35be3e491e8160f76da6093aaeff14f143eb52b",
+      "_from": ".",
+      "_npmVersion": "2.8.3",
+      "_nodeVersion": "0.12.7",
+      "_npmUser": {
+        "name": "kgryte",
+        "email": "kgryte@gmail.com"
+      },
+      "dist": {
+        "shasum": "e35be3e491e8160f76da6093aaeff14f143eb52b",
+        "tarball": "http://registry.npmjs.org/dstructs-matrix/-/dstructs-matrix-2.0.2.tgz"
+      },
+      "maintainers": [
+        {
+          "name": "kgryte",
+          "email": "kgryte@gmail.com"
+        }
+      ],
+      "directories": {}
+    },
+    "2.1.0": {
+      "name": "dstructs-matrix",
+      "version": "2.1.0",
+      "description": "Matrices.",
+      "author": {
+        "name": "Athan Reines",
+        "email": "kgryte@gmail.com"
+      },
+      "contributors": [
+        {
+          "name": "Athan Reines",
+          "email": "kgryte@gmail.com"
+        },
+        {
+          "name": "Philipp Burckhardt",
+          "email": "pburckhardt@outlook.com"
+        }
+      ],
+      "scripts": {
+        "test": "mocha",
+        "test-cov": "istanbul cover ./node_modules/.bin/_mocha --dir ./reports/coverage -- -R spec",
+        "codecov": "istanbul cover ./node_modules/.bin/_mocha --dir ./reports/codecov/coverage --report lcovonly -- -R spec && cat ./reports/codecov/coverage/lcov.info | codecov && rm -rf ./reports/codecov"
+      },
+      "main": "./lib",
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/dstructs/matrix.git"
+      },
+      "keywords": [
+        "compute.io",
+        "compute",
+        "computation",
+        "mathematics",
+        "math",
+        "linear",
+        "algebra",
+        "two dimensional",
+        "2d",
+        "matrix",
+        "matrices",
+        "data",
+        "structure",
+        "data structure",
+        "array",
+        "typed",
+        "dstructs"
+      ],
+      "bugs": {
+        "url": "https://github.com/dstructs/matrix/issues"
+      },
+      "dependencies": {
+        "compute-cast-arrays": "^1.0.0",
+        "compute-dtype": "^1.0.0",
+        "compute-indexspace": "^1.0.1",
+        "validate.io-array": "^1.0.6",
+        "validate.io-contains": "^1.0.0",
+        "validate.io-function": "^1.0.2",
+        "validate.io-integer-primitive": "^1.0.0",
+        "validate.io-nan": "^1.0.3",
+        "validate.io-nonnegative-integer": "^1.0.0",
+        "validate.io-nonnegative-integer-array": "^1.0.1",
+        "validate.io-number-primitive": "^1.0.0",
+        "validate.io-string-primitive": "^1.0.0"
+      },
+      "devDependencies": {
+        "chai": "3.x.x",
+        "codecov": "^1.0.1",
+        "istanbul": "^0.3.0",
+        "jshint": "2.x.x",
+        "jshint-stylish": "2.x.x",
+        "mocha": "2.x.x",
+        "type-name": "^1.0.1",
+        "validate.io-typed-array": "^1.0.0"
+      },
+      "license": "MIT",
+      "gitHead": "426ecf0b8b287306d4d4120c194f7567de9af6ce",
+      "homepage": "https://github.com/dstructs/matrix#readme",
+      "_id": "dstructs-matrix@2.1.0",
+      "_shasum": "ff3f9e3c95fee426e0479240b656ead07eaf2c1a",
+      "_from": ".",
+      "_npmVersion": "2.8.3",
+      "_nodeVersion": "0.12.7",
+      "_npmUser": {
+        "name": "kgryte",
+        "email": "kgryte@gmail.com"
+      },
+      "dist": {
+        "shasum": "ff3f9e3c95fee426e0479240b656ead07eaf2c1a",
+        "tarball": "http://registry.npmjs.org/dstructs-matrix/-/dstructs-matrix-2.1.0.tgz"
+      },
+      "maintainers": [
+        {
+          "name": "kgryte",
+          "email": "kgryte@gmail.com"
+        },
+        {
+          "name": "planeshifter",
+          "email": "pgb@andrew.cmu.edu"
+        }
+      ],
+      "directories": {}
+    },
+    "2.1.1": {
+      "name": "dstructs-matrix",
+      "version": "2.1.1",
+      "description": "Matrices.",
+      "author": {
+        "name": "Athan Reines",
+        "email": "kgryte@gmail.com"
+      },
+      "contributors": [
+        {
+          "name": "Athan Reines",
+          "email": "kgryte@gmail.com"
+        },
+        {
+          "name": "Philipp Burckhardt",
+          "email": "pburckhardt@outlook.com"
+        }
+      ],
+      "scripts": {
+        "test": "mocha",
+        "test-cov": "istanbul cover ./node_modules/.bin/_mocha --dir ./reports/coverage -- -R spec",
+        "codecov": "istanbul cover ./node_modules/.bin/_mocha --dir ./reports/codecov/coverage --report lcovonly -- -R spec && cat ./reports/codecov/coverage/lcov.info | codecov && rm -rf ./reports/codecov"
+      },
+      "main": "./lib",
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/dstructs/matrix.git"
+      },
+      "keywords": [
+        "compute.io",
+        "compute",
+        "computation",
+        "mathematics",
+        "math",
+        "linear",
+        "algebra",
+        "two dimensional",
+        "2d",
+        "matrix",
+        "matrices",
+        "data",
+        "structure",
+        "data structure",
+        "array",
+        "typed",
+        "dstructs"
+      ],
+      "bugs": {
+        "url": "https://github.com/dstructs/matrix/issues"
+      },
+      "dependencies": {
+        "compute-dtype": "^1.0.0",
+        "compute-indexspace": "^1.0.1",
+        "dstructs-cast-arrays": "^1.0.2",
+        "validate.io-array": "^1.0.6",
+        "validate.io-contains": "^1.0.0",
+        "validate.io-function": "^1.0.2",
+        "validate.io-integer-primitive": "^1.0.0",
+        "validate.io-nan": "^1.0.3",
+        "validate.io-nonnegative-integer": "^1.0.0",
+        "validate.io-nonnegative-integer-array": "^1.0.1",
+        "validate.io-number-primitive": "^1.0.0",
+        "validate.io-string-primitive": "^1.0.0"
+      },
+      "devDependencies": {
+        "chai": "3.x.x",
+        "codecov": "^1.0.1",
+        "istanbul": "^0.3.0",
+        "jshint": "2.x.x",
+        "jshint-stylish": "2.x.x",
+        "mocha": "2.x.x",
+        "type-name": "^1.0.1",
+        "validate.io-typed-array": "^1.0.0"
+      },
+      "license": "MIT",
+      "gitHead": "4dfacee66ffdc21526775dcd961e25ce5bfd438d",
+      "homepage": "https://github.com/dstructs/matrix#readme",
+      "_id": "dstructs-matrix@2.1.1",
+      "_shasum": "cb07edff71585b039b27e0e90f6b9103c5d8f2bc",
+      "_from": ".",
+      "_npmVersion": "2.8.3",
+      "_nodeVersion": "0.12.7",
+      "_npmUser": {
+        "name": "kgryte",
+        "email": "kgryte@gmail.com"
+      },
+      "dist": {
+        "shasum": "cb07edff71585b039b27e0e90f6b9103c5d8f2bc",
+        "tarball": "http://registry.npmjs.org/dstructs-matrix/-/dstructs-matrix-2.1.1.tgz"
+      },
+      "maintainers": [
+        {
+          "name": "kgryte",
+          "email": "kgryte@gmail.com"
+        },
+        {
+          "name": "planeshifter",
+          "email": "pgb@andrew.cmu.edu"
+        }
+      ],
+      "directories": {}
+    },
+    "2.1.2": {
+      "name": "dstructs-matrix",
+      "version": "2.1.2",
+      "description": "Matrices.",
+      "author": {
+        "name": "Athan Reines",
+        "email": "kgryte@gmail.com"
+      },
+      "contributors": [
+        {
+          "name": "Athan Reines",
+          "email": "kgryte@gmail.com"
+        },
+        {
+          "name": "Philipp Burckhardt",
+          "email": "pburckhardt@outlook.com"
+        }
+      ],
+      "scripts": {
+        "test": "mocha",
+        "test-cov": "istanbul cover ./node_modules/.bin/_mocha --dir ./reports/coverage -- -R spec",
+        "codecov": "istanbul cover ./node_modules/.bin/_mocha --dir ./reports/codecov/coverage --report lcovonly -- -R spec && cat ./reports/codecov/coverage/lcov.info | codecov && rm -rf ./reports/codecov"
+      },
+      "main": "./lib",
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/dstructs/matrix.git"
+      },
+      "keywords": [
+        "compute.io",
+        "compute",
+        "computation",
+        "mathematics",
+        "math",
+        "linear",
+        "algebra",
+        "two dimensional",
+        "2d",
+        "matrix",
+        "matrices",
+        "data",
+        "structure",
+        "data structure",
+        "array",
+        "typed",
+        "dstructs"
+      ],
+      "bugs": {
+        "url": "https://github.com/dstructs/matrix/issues"
+      },
+      "dependencies": {
+        "compute-dtype": "^1.0.0",
+        "compute-indexspace": "^1.0.1",
+        "dstructs-cast-arrays": "^1.0.2",
+        "utils-copy": "^1.0.0",
+        "validate.io-array": "^1.0.6",
+        "validate.io-contains": "^1.0.0",
+        "validate.io-function": "^1.0.2",
+        "validate.io-integer-primitive": "^1.0.0",
+        "validate.io-nan": "^1.0.3",
+        "validate.io-nonnegative-integer": "^1.0.0",
+        "validate.io-nonnegative-integer-array": "^1.0.1",
+        "validate.io-number-primitive": "^1.0.0",
+        "validate.io-string-primitive": "^1.0.0"
+      },
+      "devDependencies": {
+        "chai": "3.x.x",
+        "codecov": "^1.0.1",
+        "istanbul": "^0.3.0",
+        "jshint": "2.x.x",
+        "jshint-stylish": "2.x.x",
+        "mocha": "2.x.x",
+        "type-name": "^1.0.1",
+        "validate.io-typed-array": "^1.0.0"
+      },
+      "license": "MIT",
+      "gitHead": "6e6f2d5ab98358bfc083d4499d0906acd50bca25",
+      "homepage": "https://github.com/dstructs/matrix#readme",
+      "_id": "dstructs-matrix@2.1.2",
+      "_shasum": "b49625600a20b421c609d1911bb1d838290747da",
+      "_from": ".",
+      "_npmVersion": "2.8.3",
+      "_nodeVersion": "0.12.7",
+      "_npmUser": {
+        "name": "kgryte",
+        "email": "kgryte@gmail.com"
+      },
+      "dist": {
+        "shasum": "b49625600a20b421c609d1911bb1d838290747da",
+        "tarball": "http://registry.npmjs.org/dstructs-matrix/-/dstructs-matrix-2.1.2.tgz"
+      },
+      "maintainers": [
+        {
+          "name": "kgryte",
+          "email": "kgryte@gmail.com"
+        },
+        {
+          "name": "planeshifter",
+          "email": "pgb@andrew.cmu.edu"
+        }
+      ],
+      "directories": {}
+    }
+  },
+  "readme": "Matrix\n===\n[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][codecov-image]][codecov-url] [![Dependencies][dependencies-image]][dependencies-url]\n\n> Matrices.\n\nThis module exports a [`Matrix`][matrix] data structure for efficient storage and computation of numeric values. The data structure provides an interface for accessing and modifying one or more stored values. Matrices find common use in linear algebra, numerical analysis, image manipulation, machine learning, and data processing.\n\n---\n1. [Installation](#installation)\n1. [Usage](#usage)\n\t-\t[Matrix](#matrix)\n\t\t*\t[matrix()](#matrix)\n\t-\t[Properties](#properties)\n\t\t*\t[dtype](#matrix-dtype)\n\t\t*\t[ndims](#matrix-ndims)\n\t\t*\t[shape](#matrix-shape)\n\t\t*\t[offset](#matrix-offset)\n\t\t*\t[strides](#matrix-strides)\n\t\t*\t[length](#matrix-length)\n\t\t*\t[nbytes](#matrix-nbytes)\n\t\t*\t[data](#matrix-data)\n\t-\t[Methods](#methods)\n\t\t*\t[Set](#set-methods)\n\t\t\t-\t[Matrix.prototype.set()](#matrix-set)\n\t\t\t-\t[Matrix.prototype.iset()](#matrix-iset)\n\t\t\t-\t[Matrix.prototype.mset()](#matrix-mset)\n\t\t\t-\t[Matrix.prototype.sset()](#matrix-sset)\n\t\t*\t[Get](#get-methods)\n\t\t\t-\t[Matrix.prototype.get()](#matrix-get)\n\t\t\t-\t[Matrix.prototype.iget()](#matrix-iget)\n\t\t\t-\t[Matrix.prototype.mget()](#matrix-mget)\n\t\t\t-\t[Matrix.prototype.sget()](#matrix-sget)\n\t\t*\t[Accessor](#accessor-methods)\n\t\t\t-\t[Matrix.prototype.toString()](#matrix-tostring)\n\t\t\t-\t[Matrix.prototype.toJSON()](#matrix-tojson)\n\t-\t[Constructor](#matrix-constructor)\n\t-\t[Raw](#raw)\n\t\t*\t[matrix.raw()](#matrix-raw)\n1.\t[Notes](#notes)\n\t-\t[Linear Indexing](#linear-indexing)\n1. \t[Examples](#examples)\n1.\t[Tests](#tests)\n\t-\t[Unit](#unit)\n\t-\t[Coverage](#test-coverage)\n1. \t[License](#license)\n\n---\n## Installation\n\n``` bash\n$ npm install dstructs-matrix\n```\n\nFor use in the browser, use [browserify][browserify].\n\n\n## Usage\n\n``` javascript\nvar matrix = require( 'dstructs-matrix' );\n```\n\n<a name=\"matrix\"></a>\n#### matrix( [data,] shape[, dtype] )\n\nCreates a new `Matrix` having a specified `shape` (dimensions => `[rows,cols]`).\n\n``` javascript\nvar mat = matrix( [3,2] );\n/*\n\t[ 0 0\n\t  0 0\n\t  0 0 ]\n*/\n```\n\nBy default, the matrix elements are floating-point 64-bit numbers (`float64`). To specify a different data type, provide a `dtype`.\n\n``` javascript\nvar mat = matrix( [2,2], 'int8' );\n/*\n\t[ 0 0\n\t  0 0 ]\n*/\n```\n\nThe following `dtypes` are accepted:\n\n*\t`int8`\n*\t`uint8`\n*\t`uint8_clamped`\n*\t`int16`\n*\t`uint16`\n*\t`int32`\n*\t`uint32`\n*\t`float32`\n*\t`float64`\n\n\nIf a __linear__ `numeric array` is not provided, the function initializes a __zero-filled__ matrix. To initialize a matrix, provide a typed input `data` array, whose length matches the specified `shape`.\n\n``` javascript\nvar data = new Int8Array( 6 );\n\nfor ( var i = 0; i < data.length; i++ ) {\n\tdata[ i ] = i;\n}\n\nvar mat = matrix( data, [2,3] ); // 2*3 = 6\n/*\n\t[ 0 1 2\n\t  3 4 5 ]\n*/\n```\n\nTo cast an input `data` array to a different data type, provide a `dtype`.\n\n``` javascript\nvar mat = matrix( data, [2,2], 'uint32' );\n/*\n\t[ 0 1\n\t  2 3 ]\n*/\n```\n\nIf provided an `Array` instead of a typed array and no `dtype` is specified, the input `data` array is [cast][cast-arrays] to `float64`.\n\n``` javascript\nvar data = [ 10, 20, 30, 40, 50, 60 ];\n\nvar mat = matrix( data, [3,2] );\n/*\n\t[ 10 20\n\t  30 40\n\t  50 60 ]\n*/\n\nvar dtype = mat.dtype;\n// returns 'float64'\n```\n\n\n---\n## Properties\n\nA `Matrix` has the following properties...\n\n\n<a name=\"matrix-dtype\" class=\"read-only-property\"></a>\n#### dtype\n\nA __read-only__ property returning the underlying storage data type.\n\n``` javascript\nvar dtype = mat.dtype;\n// returns <string>\n```\n\n<a name=\"matrix-ndims\" class=\"read-only-property\"></a>\n#### ndims\n\nA __read-only__ property returning the number of dimensions.\n\n``` javascript\nvar ndims = mat.ndims;\n// returns 2\n```\n\n<a name=\"matrix-shape\" class=\"read-only-property\"></a>\n#### shape\n\nA __read-only__ property returning the matrix `shape`.\n\n``` javascript\nvar shape = mat.shape;\n// returns [...]\n```\n\n<a name=\"matrix-offset\"></a>\n#### offset\n\nA property returning the `offset` used to index into the underlying data store.\n\n``` javascript\nvar offset = mat.offset;\n// returns 0\n```\n\nBy default, the `offset` is `0`. While not __read-only__, most consumers should treat the `offset` as a __read-only__ property.\n\n\n<a name=\"matrix-strides\" class=\"read-only-property\"></a>\n#### strides\n\nA __read-only__ property returning the `strides` used to index into the underlying data store.\n\n``` javascript\nvar strides = mat.strides;\n// returns [...]\n```\n\nWhile not __frozen__, most consumers should treat the `strides` elements as __read-only__ elements.\n\n\n<a name=\"matrix-length\" class=\"read-only-property\"></a>\n#### length\n\nA __read-only__ property returning the matrix `length`; i.e., how many elements are in the `Matrix`, similar to [`Array#length`][array-length].\n\n``` javascript\nvar len = mat.length;\n// returns <number>\n```\n\n__Note__: while a `Matrix` has a `length` property, a `Matrix` should __not__ be considered `array-like`, as `array` indexing with __not__ work as expected.\n\n``` javascript\nvar data = new Float32Array( 10 );\n\nvar mat = matrix( data, [1,10] );\n/*\n    [ 0 0 0 0 0 0 0 0 0 0 ]\n*/\n\nvar value = mat.get( 1, 3 );\n// returns 0\n\nvalue = mat[ 3 ];\n// returns undefined\n```\n\n<a name=\"matrix-nbytes\" class=\"read-only-property\"></a>\n#### nbytes\n\nA __read-only__ property returning the number of bytes consumed by the `Matrix` elements.\n\n``` javascript\nvar nbytes = mat.nbytes;\n// returns <number>\n```\n\n<a name=\"matrix-data\" class=\"read-only-property\"></a>\n#### data\n\nA __read-only__ property pointing to the underlying storage array.\n\n``` javascript\nvar data = mat.data;\n// returns <TypedArray>\n```\n\n---\n## Methods\n\nA `Matrix` has the following methods...\n\n\n### Set Methods\n\nThese methods mutate a `Matrix`:\n\n<a name=\"matrix-set\"></a>\n#### Matrix.prototype.set( i, j, value )\n\nSets a `Matrix` element located at a row and column index.\n\n``` javascript\nmat.set( 3, 1, 20 );\n/*\n\t[ 0 1\n\t  2 3\n\t  4 5\n\t  6 20\n\t  8 9 ]\n*/\n```\n\nSet methods return the `Matrix` instance and are thus chainable.\n\n``` javascript\nmat\n\t.set( 3, 1, 21 )\n\t.set( 3, 1, 22 )\n\t.set( 3, 1, 23 )\n\t.set( 3, 1, 24 )\n\t.get( 3, 1 );\n// returns 24\n```\n\n__Note__: out-of-bounds row and column indices will silently fail.\n\n\n<a name=\"matrix-iset\"></a>\n#### Matrix.prototype.iset( index, value )\n\nSets a `Matrix` element located at a specified [`index`](#linear-indexing). If `index < 0`, the index refers to a position relative to the `Matrix` length, where `index = -1` corresponds to the last element.\n\n``` javascript\nmat.iset( 7, 25 );\n/*\n\t[ 0 1\n\t  2 3\n\t  4 5\n\t  6 25\n\t  8 9 ]\n*/\n\nmat.iset( -3, 20 );\n/*\n\t[ 0 1\n\t  2 3\n\t  4 5\n\t  6 20\n\t  8 9 ]\n*/\n```\n\n__Note__: out-of-bounds indices will silently fail.\n\n\n<a name=\"matrix-mset\"></a>\n#### Matrix.prototype.mset( idx[, cols], value[, thisArg] )\n\nSets multiple `Matrix` elements. If provided a single `array`, `idx` is treated as an `array` of [linear indices](#linear-indexing). The `value` argument may be either a `number` primitive, a `Matrix` containing values to set, or a callback `function`.\n\n``` javascript\nvar data = new Int8Array( 10*10 );\n\nfor ( var i = 0; i < data.length; i++ ) {\n\tdata[ i ] = i;\n}\n// Create a 10x10 matrix:\nvar mat = matrix( data, [10,10] );\n\nvar submat = mat.mget( [0,2,4], [1,4,5] );\n/*\n\t[  1  4  5\n\t  21 24 25\n\t  41 44 45 ]\n*/\n\nmat.mset( [1,4,5,21,24,25,41,44,45], 5 );\n\nsubmat = mat.mget( [0,2,4], [1,4,5] );\n/*\n\t[ 5 5 5\n\t  5 5 5\n\t  5 5 5 ]\n*/\n\nvar zeros = matrix( [1,3], 'int8' );\n/*\n\t[ 0 0 0 ]\n*/\n\nmat.mset( [2], [1,4,5], zeros );\n\nsubmat = mat.mget( [0,2,4], [1,4,5] );\n/*\n\t[ 5 5 5\n\t  0 0 0\n\t  5 5 5 ]\n*/\n```\n\nA callback is provided four arguments:\n*\t__d__: current value\n*\t__i__: row index\n*\t__j__: column index\n*\t__idx__: linear index\n\nand is __expected__ to return a `number` primitive or a value which can be cast to a `number` primitive.\n\n``` javascript\nfunction set( d, i, j, idx ) {\n\treturn '' + j + i;\n}\n\nmat.mset( [0], [1,4,5], set );\n\nmat.mget( [0,2,4], [1,4,5] );\n/*\n\t[ 10 40 50\n\t   0  0  0\n\t   5  5  5 ]\n*/\n```\n\nBy default, the callback `this` context is set to the `Matrix` instance. To specify a different `this` context, provide a `thisArg`.\n\n``` javascript\nfunction set( d, i, j, idx ) {\n\tconsole.log( this );\n\t// returns null\n\treturn '' + j + i;\n}\n\nmat.mset( [0], [1,4,5], set, null );\n```\n\n\n__Notes__:\n*\tNegative indices are __not__ permitted.\n* \tOut-of-bounds row and column indices will silently fail.\n*\tValues which are set are cast to the target `Matrix` data type.\n*\tA value `Matrix` must have dimensions which match the submatrix defined by row and column indices.\n*\tIf linear indices are provided, a value `Matrix` must have a `length` equal to the number of provided indices.\n\n\n\n<a name=\"matrix-sset\"></a>\n#### Matrix.prototype.sset( subsequence, value[, thisArg] )\n\nSets `Matrix` elements according to a specified [`subsequence`][indexspace]. The `subsequence` must specify __both__ row and column subsequences; e.g., `'3:7,5:9'`, where `3:7` corresponds to row indices `3,4,5,6` and `5:9` corresponds to column indices `5,6,7,8`. The second argument may be either a `number` primitive, a `Matrix` containing values to set, or a callback `function`.\n\n``` javascript\nvar data = new Float32Array( 10*10 );\n\nfor ( var i = 0; i < data.length; i++ ) {\n\tdata[ i ] = i;\n}\n// Create a 10x10 matrix:\nvar mat = matrix( data, [10,10] );\n\nvar submat = mat.sget( '3:7,5:9' );\n/*\n\t[ 35 36 37 38\n\t  45 46 47 48\n\t  55 56 57 58\n\t  65 66 67 68 ]\n*/\n\nvar zeros = matrix( [2,2], 'float32' );\n/*\n\t[ 0 0\n\t  0 0 ]\n*/\n\nmat.sset( '4:6,6:8', zeros );\n\nsubmat = mat.sget( '3:7,5:9' );\n/*\n\t[ 35 36 37 38\n\t  45  0  0 48\n\t  55  0  0 58\n\t  65 66 67 68 ]\n*/\n```\n\nA callback is provided four arguments:\n*\t__d__: value at a subsequence index\n*\t__i__: row index\n*\t__j__: column index\n*\t__idx__: linear index\n\nand is __expected__ to return a `number` primitive or a value which can be cast to a `number` primitive.\n\n``` javascript\nfunction set( d, i, j, idx ) {\n\treturn '' + j + i;\n}\n\nmat.sset( '4:6,6:8', set );\n\nsubmat = mat.sget( '3:7,5:9' );\n/*\n\t[ 35 36 37 38\n\t  45 64 74 48\n\t  55 65 75 58\n\t  65 66 67 68 ]\n*/\n```\n\nBy default, the callback `this` context is set to the `Matrix` instance. To specify a different `this` context, provide a `thisArg`.\n\n``` javascript\nfunction set( d, i, j, idx ) {\n\tconsole.log( this );\n\t// returns null\n\treturn '' + j + i;\n}\n\nmat.sset( '4:6,6:8', set, null );\n```\n\n\n__Notes__:\n*\tValues which are set are cast to the target `Matrix` data type.\n* \tOut-of-bounds row and column indices will silently fail.\n*\tA provided `Matrix` must have dimensions which match the submatrix defined by row and column subsequences.\n*\tFor further subsequence documentation, see [compute-indexspace][indexspace].\n\n\n===\n### Get Methods\n\nThese methods provide access to `Matrix` elements:\n\n<a name=\"matrix-get\"></a>\n#### Matrix.prototype.get( i, j )\n\nReturns a `Matrix` element located at a row and column index.\n\n``` javascript\nvar data = new Float32Array( 10 );\n\nfor ( var i = 0; i < data.length; i++ ) {\n\tdata[ i ] = i;\n}\n\nvar mat = matrix( data, [5,2] );\n/*\n\t[ 0 1\n\t  2 3\n\t  4 5\n\t  6 7\n\t  8 9 ]\n*/\n\nvar values = mat.get( 3, 1 );\n// returns 7\n```\n\n__Note__: out-of-bounds row and column indices will return a value of `undefined`.\n\n\n<a name=\"matrix-iget\"></a>\n#### Matrix.prototype.iget( index )\n\nReturns a `Matrix` element located at a specified [`index`](#linear-indexing). If `index < 0`, the index refers to a position relative to the `Matrix` length, where `index = -1` corresponds to the last element.\n\n``` javascript\nvar value = mat.iget( 7 );\n// returns 7\n\nvalue = mat.iget( -3 );\n// returns 7\n```\n\n__Note__: out-of-bounds indices will return a value of `undefined`.\n\n\n<a name=\"matrix-mget\"></a>\n#### Matrix.prototype.mget( idx[, cols] )\n\nReturns multiple `Matrix` elements. If provided a single argument, the method treats `idx` as an `array` of [linear indices](#linear-indexing) (`idx[i] >= 0`) and returns a new `Matrix` instance having a single row. Otherwise, `idx` and `cols` are `integer` arrays which specify row and column indices and the method returns a new `Matrix` instance having dimensions determined by the number of defined rows and columns.\n\n``` javascript\nvar data = new Int8Array( 10 );\nfor ( var i = 0; i < data.length; i++ ) {\n\tdata[ i ] = i*2;\n}\n\nvar mat = matrix( data, [5,2] );\n/*\n\t[  0  2\n\t   4  6\n\t   8 10\n\t  12 14\n\t  16 18 ]\n*/\n\n// Scramble the second column:\nvar vals = mat.mget( [1,5,3,9,7] );\n/*\n\t[ 2, 10, 6, 18, 14 ]\n*/\n\n// Extract select rows and columns in arbitrary order:\nvar mat1 = mat.mget( [1,3,2], [1] );\n/*\n\t[  4\n\t  14\n\t   8 ]\n*/\n```\n\nIf `idx` and/or `cols` is `null`, all rows (columns) are extracted.\n\n``` javascript\n// Replicate a column:\nvar rep = mat.mget( null, [1,1,1,1,1] );\n/*\n\t[  2  2  2  2  2\n\t   6  6  6  6  6\n\t  10 10 10 10 10\n\t  14 14 14 14 14\n\t  18 18 18 18 18 ]\n*/\n\n// Tile select rows and columns:\nvar tile = mat.mget( [1,2,1,2], [0,1,0,1] );\n/*\n\t[\n\t\t4  6 4  6\n\t\t8 10 8 10\n\t\t4  6 4  6\n\t\t8 10 8 10\n\t]\n*/\n```\n\n__Note__: out-of-bounds indices are ignored.\n\n\n<a name=\"matrix-sget\"></a>\n#### Matrix.prototype.sget( subsequence )\n\nReturns `Matrix` elements in a new `Matrix` according to a specified [`subsequence`][indexspace]. The `subsequence` must specify __both__ row and column subsequences; e.g., `'3:7,5:9'`, where `3:7` corresponds to row indices `3,4,5,6` and `5:9` corresponds to column indices `5,6,7,8`. If a `subsequence` does not correspond to any `Matrix` elements, the method returns an empty `Matrix`.\n\n``` javascript\nvar submatrix;\n\nsubmatrix = mat.sget( ':,:' ); // Copy a matrix\n/*\n\t[ 0 1\n\t  2 3\n\t  4 5\n\t  6 7\n\t  8 9 ]\n*/\n\nsubmatrix = mat.sget( '1:4,:' );\n/*\n\t[ 2 3\n\t  4 5\n\t  6 7 ]\n*/\n\nsubmatrix = mat.sget( '::-1,:' ); // flip top-to-bottom\n/*\n\t[ 8 9\n\t  6 7\n\t  4 5\n\t  2 3\n\t  0 1 ]\n*/\n\nsubmatrix = mat.sget( ':,::-1' ); // flip left-to-right\n/*\n\t[ 1 0\n\t  3 2\n\t  5 4\n\t  7 6\n\t  9 8 ]\n*/\n\nsubmatrix = mat.sget( '50:100,:' );\n/*\n\t[]\n*/\n```\n\n__Notes__:\n*\tOut-of-bounds indices are ignored.\n*\tFor further subsequence documentation, see [compute-indexspace][indexspace].\n\n\n===\n### Accessor Methods\n\nThese methods do **not** mutate a `Matrix` and return some representation of a `Matrix`:\n\n<a name=\"matrix-tostring\"></a>\n#### Matrix.prototype.toString()\n\nReturns a `string` representation of a `Matrix`. This method is similar to [`Array#toString`][array-string], except that rows are delineated by __semicolons__ and column values are delineated by __commas__.\n\n``` javascript\nvar data = new Int8Array( 10 );\nfor ( var i = 0; i < data.length; i++ ) {\n\tdata[ i ] = i;\n}\n\nvar mat = matrix( data, [5,2] );\n\nvar str = mat.toString();\n// 0,1;2,3;4,5;6,7;8,9\n```\n\nTo construct an `array` of `arrays` from the `string` representation,\n\n``` javascript\nvar rows,\n\tcols,\n\ti, j;\n\nrows = str.split( ';' );\nfor ( i = 0; i < rows.length; i++ ) {\n\tcols = rows[ i ].split( ',' );\n\trows[ i ] = new Array( cols.length );\n\tfor ( j = 0; j < cols.length; j++ ) {\n\t\trows[ i ][ j ] = parseFloat( cols[ j ] );\n\t}\n}\n```\n\n\n<a name=\"matrix-tojson\"></a>\n#### Matrix.prototype.toJSON()\n\nReturns a [`JSON`][json] representation of a `Matrix`. [`JSON#stringify`][json-stringify] implicitly calls this method when stringifying a `Matrix` instance.\n\n``` javascript\nvar data = new Int8Array( 10 );\nfor ( var i = 0; i < data.length; i++ ) {\n\tdata[ i ] = i;\n}\n\nvar mat = matrix( data, [5,2] );\n/*\n\t[ 0 1\n\t  2 3\n\t  4 5\n\t  6 7\n\t  8 9 ]\n*/\n\nvar json = mat.toJSON();\n/*\n\t{\n\t\t\"type\": \"Matrix\",\n\t\t\"dtype\": \"int8\",\n\t\t\"shape\": [5,2],\n\t\t\"offset\": 0,\n\t\t\"strides\": [2,1],\n\t\t\"raw\": false,\n\t\t\"data\": [0,1,2,3,4,5,6,7,8,9]\n\t}\n*/\n```\n\nTo a [revive][json-parse] a `Matrix` from a [`JSON`][json] string,\n\n``` javascript\n// Matrix reviver:\nvar reviver = require( 'dstructs-matrix-reviver' );\n\n// Stringify a matrix (implicitly calls `.toJSON`):\nvar str = JSON.stringify( mat );\n// returns '{\"type\":\"Matrix\",\"dtype\":\"int8\",\"shape\":[5,2],\"offset\":0,\"strides\":[2,1],\"raw\":false,\"data\":[0,1,2,3,4,5,6,7,8,9]}'\n\n// Revive a Matrix from a JSON string:\nvar mat = JSON.parse( str, reviver );\n/*\n\t[ 0 1\n\t  2 3\n\t  4 5\n\t  6 7\n\t  8 9 ]\n*/\n```\n\n\n---\n<a name=\"matrix-constructor\"></a>\n## Constructor\n\nA `Matrix` has a constructor having the following interface...\n\n\n#### mat.constructor( data, dtype, shape, offset, strides )\n\nCreates a new `Matrix` having a specified `shape`, `offset`, `strides`, `dtype`, and underlying typed `data` store.\n\n``` javascript\nvar data = new Float32Array( 10 );\n\nvar mat1 = matrix( data, [5,2] );\n/*\n\t[ 0 0\n\t  0 0\n\t  0 0\n\t  0 0\n\t  0 0 ]\n*/\n\nvar mat2 = new mat1.constructor( data, mat1.dtype, [2,5], 0, [5,1] );\n/*\n\t[ 0 0 0 0 0\n\t  0 0 0 0 0 ]\n*/\n```\n\n__Note__: while more performant, constructing a `Matrix` in this manner should be carefully considered. Arguments are not validated or sanity checked.\n\n\n---\n## Raw\n\nFor performance, a lower-level interface is provided which forgoes some of the guarantees of the above API, such as input argument validation and measures to prevent `Matrices` from becoming corrupted. While use of the above API is encouraged in REPL environments, use of the lower-level interface may be warranted when arguments are of a known type or when many `Matrices` must be created.\n\n\n\n<a name=\"matrix-raw\"></a>\n#### matrix.raw( [data,] shape[, dtype] )\n\nCreates a new `Matrix` having a specified `shape`.\n\n``` javascript\nvar data = new Float32Array( 10 );\n\nvar mat = matrix.raw( data, [5,2] );\n/*\n\t[ 0 0\n\t  0 0\n\t  0 0\n\t  0 0\n\t  0 0 ]\n*/\n```\n\nIf the input `data` type is known, `Matrix` creation is significantly faster.\n\n``` javascript\nvar mat = matrix.raw( data, [5,2], 'float32' );\n/*\n\t[ 0 0\n\t  0 0\n\t  0 0\n\t  0 0\n\t  0 0 ]\n*/\n```\n\n__Notes__:\n* \tThe `shape` and `dtype` parameters are the same as for the higher-level `Matrix` interface.\n*\tSpecifying a `dtype` does __not__ cast the data to a different storage type. Instead, providing the argument circumvents the need to determine the input `data` type, resulting in increased performance.\n*\tInput `data` __must__ be a typed array. Unlike the higher-level `Matrix` interface, plain `arrays` are __not__ cast to `float64`. Providing a plain `array` can lead to subtle bugs and affect performance.\n*\t`Matrix` properties and methods are the same as for the higher-level API, with the exception that `Matrix` properties are __no__ longer read-only and methods do __not__ perform input argument validation.\n* \tSetting properties is __not__ recommended as the `Matrix` can become corrupted; e.g., incompatible dimensions, out-of-bounds indexing, etc. In contrast to the strict API above, setting `Matrix` properties will __not__ result in an `error` being thrown. Accordingly, property modification may introduce silent bugs.\n*\tThe lower-level `Matrix` constructor has the same interface as the higher-level `Matrix` constructor.\n\n\n\n---\n## Notes\n\n#### Linear Indexing\n\nA linear `index` corresponds to an element position in a flattened `Matrix` arranged in [__row-major__][row-major-order] order. For example, consider a [__zero-filled__][zeros] 5x2 matrix, its subscripts, and its corresponding linear indices.\n\n``` javascript\n/*\n\tMatrix      Subscripts      Indices\n\n\t[ 0 0       [ a00 a01       [ 0 1\n\t  0 0         a10 a11         2 3\nA =\t  0 0   =>    a20 a21   =>    4 5\n\t  0 0         a30 a31         6 7\n\t  0 0 ]       a40 a41 ]       8 9 ]\n*/\n```\n\n\n---\n## Examples\n\n``` javascript\nvar matrix = require( 'dstructs-matrix' );\n\n// Create a new 2x2 matrix:\nvar mat = matrix( [2,2] );\nconsole.log( mat );\n\n// Inspect the initialized matrix elements:\nconsole.log( mat.get( 1, 1 ) );\n\n// Set a matrix element:\nconsole.log( mat.set( 1, 1, 5  ) );\n\n// Confirm that the matrix element was set:\nconsole.log( mat.get( 1, 1 ) );\n\n// Convert the matrix to a string:\nconsole.log( mat.toString() );\n\n// Convert the matrix to JSON:\nconsole.log( mat.toJSON() );\n```\n\nTo run the example code from the top-level application directory,\n\n``` bash\n$ node ./examples/index.js\n```\n\n\n---\n## Tests\n\n### Unit\n\nUnit tests use the [Mocha][mocha] test framework with [Chai][chai] assertions. To run the tests, execute the following command in the top-level application directory:\n\n``` bash\n$ make test\n```\n\nAll new feature development should have corresponding unit tests to validate correct functionality.\n\n\n### Test Coverage\n\nThis repository uses [Istanbul][istanbul] as its code coverage tool. To generate a test coverage report, execute the following command in the top-level application directory:\n\n``` bash\n$ make test-cov\n```\n\nIstanbul creates a `./reports/coverage` directory. To access an HTML version of the report,\n\n``` bash\n$ make view-cov\n```\n\n\n---\n## License\n\n[MIT license][mit-license].\n\n\n## Copyright\n\nCopyright &copy; 2015. The [Compute.io][compute-io] Authors.\n\n\n[npm-image]: http://img.shields.io/npm/v/dstructs-matrix.svg\n[npm-url]: https://npmjs.org/package/dstructs-matrix\n\n[travis-image]: http://img.shields.io/travis/dstructs/matrix/master.svg\n[travis-url]: https://travis-ci.org/dstructs/matrix\n\n[codecov-image]: https://img.shields.io/codecov/c/github/dstructs/matrix/master.svg\n[codecov-url]: https://codecov.io/github/dstructs/matrix?branch=master\n\n[dependencies-image]: http://img.shields.io/david/dstructs/matrix.svg\n[dependencies-url]: https://david-dm.org/dstructs/matrix\n\n[dev-dependencies-image]: http://img.shields.io/david/dev/dstructs/matrix.svg\n[dev-dependencies-url]: https://david-dm.org/dev/dstructs/matrix\n\n[github-issues-image]: http://img.shields.io/github/issues/dstructs/matrix.svg\n[github-issues-url]: https://github.com/dstructs/matrix/issues\n\n[matrix]: https://en.wikipedia.org/wiki/Matrix_(mathematics)\n[browserify]: https://github.com/substack/node-browserify\n[cast-arrays]: https://github.com/compute-io/cast-arrays\n[array-length]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length\n[indexspace]: https://github.com/compute-io/indexspace\n[array-string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toString\n[json]: http://www.json.org/\n[json-stringify]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify\n[json-parse]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse\n[row-major-order]: https://en.wikipedia.org/wiki/Row-major_order\n[zeros]: https://github.com/compute-io/zeros\n[mocha]: http://mochajs.org/\n[chai]: http://chaijs.com\n[istanbul]: https://github.com/gotwarlost/istanbul\n[mit-license]: http://opensource.org/licenses/MIT\n[compute-io]: https://github.com/compute-io\n",
+  "maintainers": [
+    {
+      "name": "kgryte",
+      "email": "kgryte@gmail.com"
+    },
+    {
+      "name": "planeshifter",
+      "email": "pgb@andrew.cmu.edu"
+    }
+  ],
+  "time": {
+    "modified": "2015-12-04T21:40:59.932Z",
+    "created": "2015-06-05T05:53:26.526Z",
+    "0.0.0": "2015-06-05T05:53:26.526Z",
+    "1.0.0": "2015-06-05T05:53:53.825Z",
+    "2.0.0": "2015-06-09T04:53:20.783Z",
+    "2.0.1": "2015-11-16T00:10:23.487Z",
+    "2.0.2": "2015-11-16T00:20:15.886Z",
+    "2.1.0": "2015-11-28T01:51:25.358Z",
+    "2.1.1": "2015-11-28T08:53:11.626Z",
+    "2.1.2": "2015-12-04T21:40:59.932Z"
+  },
+  "homepage": "https://github.com/dstructs/matrix#readme",
+  "keywords": [
+    "compute.io",
+    "compute",
+    "computation",
+    "mathematics",
+    "math",
+    "linear",
+    "algebra",
+    "two dimensional",
+    "2d",
+    "matrix",
+    "matrices",
+    "data",
+    "structure",
+    "data structure",
+    "array",
+    "typed",
+    "dstructs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dstructs/matrix.git"
+  },
+  "contributors": [
+    {
+      "name": "Athan Reines",
+      "email": "kgryte@gmail.com"
+    },
+    {
+      "name": "Philipp Burckhardt",
+      "email": "pburckhardt@outlook.com"
+    }
+  ],
+  "author": {
+    "name": "Athan Reines",
+    "email": "kgryte@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/dstructs/matrix/issues"
+  },
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "_attachments": {}
+}

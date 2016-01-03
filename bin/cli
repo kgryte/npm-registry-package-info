@@ -1,0 +1,108 @@
+#!/usr/bin/env node
+'use strict';
+
+// MODULES //
+
+var fs = require( 'fs' );
+var path = require( 'path' );
+var pkginfo = require( 'pkginfo' );
+var parseArgs = require( 'minimist' );
+var notifier = require( 'update-notifier' );
+var opts = require( './opts.json' );
+var get = require( './../lib' );
+
+
+// VARIABLES //
+
+var args;
+var pkg;
+
+
+// INIT //
+
+process.stdout.on( 'error', process.exit );
+
+
+// PACKAGE INFO //
+
+pkg = pkginfo.read( require.main );
+process.title = pkg.package.name;
+
+
+// PACKAGE UPDATES //
+
+notifier( { 'pkg': pkg.package } ).notify();
+
+
+// ARGUMENTS //
+
+args = parseArgs( process.argv.slice( 2 ), opts );
+
+
+// HELP //
+
+function onClose() {
+	process.exit( 1 );
+}
+
+if ( args.help ) {
+	fs.createReadStream( path.join( __dirname, 'usage.txt' ) )
+		.pipe( process.stdout )
+		.on( 'close', onClose );
+    return;
+}
+
+
+// VERSION //
+
+if ( args.version ) {
+	console.log( pkg.package.version );
+	return;
+}
+
+
+// OPTIONS //
+
+opts = {};
+
+opts.packages = args._;
+if ( args.port ) {
+	opts.port = parseInt( args.port, 10 );
+}
+if ( args.registry ) {
+	opts.registry = args.registry;
+}
+if ( args.protocol ) {
+	opts.protocol = args.protocol;
+}
+opts.latest = args.latest || false;
+
+
+// GET REGISTRY INFO //
+
+get( opts, clbk );
+
+/**
+* FUNCTION: clbk( error, results )
+*	Callback invoked upon receiving results.
+*
+* @private
+* @param {Error|Null} error - error object or null
+* @param {Object} results - results
+* @returns {Void}
+*/
+function clbk( error, results ) {
+	var len;
+	if ( error ) {
+		throw error;
+	}
+	len = Object.keys( results.data ).length;
+	if ( len ) {
+		process.stdout.write( JSON.stringify( results.data ), 'utf8' );
+	}
+	len = Object.keys( results.failures ).length;
+	if ( len ) {
+		process.sterr.write( JSON.stringify( results.failures ), 'utf8' );
+	}
+	process.exit( 0 );
+} // end FUNCTION clbk()

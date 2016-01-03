@@ -1,0 +1,103 @@
+{
+  "name": "dstructs-matrix",
+  "version": "2.1.2",
+  "description": "Matrices.",
+  "author": {
+    "name": "Athan Reines",
+    "email": "kgryte@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "Athan Reines",
+      "email": "kgryte@gmail.com"
+    },
+    {
+      "name": "Philipp Burckhardt",
+      "email": "pburckhardt@outlook.com"
+    }
+  ],
+  "scripts": {
+    "test": "mocha",
+    "test-cov": "istanbul cover ./node_modules/.bin/_mocha --dir ./reports/coverage -- -R spec",
+    "codecov": "istanbul cover ./node_modules/.bin/_mocha --dir ./reports/codecov/coverage --report lcovonly -- -R spec && cat ./reports/codecov/coverage/lcov.info | codecov && rm -rf ./reports/codecov"
+  },
+  "main": "./lib",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dstructs/matrix.git"
+  },
+  "keywords": [
+    "compute.io",
+    "compute",
+    "computation",
+    "mathematics",
+    "math",
+    "linear",
+    "algebra",
+    "two dimensional",
+    "2d",
+    "matrix",
+    "matrices",
+    "data",
+    "structure",
+    "data structure",
+    "array",
+    "typed",
+    "dstructs"
+  ],
+  "bugs": {
+    "url": "https://github.com/dstructs/matrix/issues"
+  },
+  "dependencies": {
+    "compute-dtype": "^1.0.0",
+    "compute-indexspace": "^1.0.1",
+    "dstructs-cast-arrays": "^1.0.2",
+    "utils-copy": "^1.0.0",
+    "validate.io-array": "^1.0.6",
+    "validate.io-contains": "^1.0.0",
+    "validate.io-function": "^1.0.2",
+    "validate.io-integer-primitive": "^1.0.0",
+    "validate.io-nan": "^1.0.3",
+    "validate.io-nonnegative-integer": "^1.0.0",
+    "validate.io-nonnegative-integer-array": "^1.0.1",
+    "validate.io-number-primitive": "^1.0.0",
+    "validate.io-string-primitive": "^1.0.0"
+  },
+  "devDependencies": {
+    "chai": "3.x.x",
+    "codecov": "^1.0.1",
+    "istanbul": "^0.3.0",
+    "jshint": "2.x.x",
+    "jshint-stylish": "2.x.x",
+    "mocha": "2.x.x",
+    "type-name": "^1.0.1",
+    "validate.io-typed-array": "^1.0.0"
+  },
+  "license": "MIT",
+  "gitHead": "6e6f2d5ab98358bfc083d4499d0906acd50bca25",
+  "homepage": "https://github.com/dstructs/matrix#readme",
+  "_id": "dstructs-matrix@2.1.2",
+  "_shasum": "b49625600a20b421c609d1911bb1d838290747da",
+  "_from": ".",
+  "_npmVersion": "2.8.3",
+  "_nodeVersion": "0.12.7",
+  "_npmUser": {
+    "name": "kgryte",
+    "email": "kgryte@gmail.com"
+  },
+  "dist": {
+    "shasum": "b49625600a20b421c609d1911bb1d838290747da",
+    "tarball": "http://registry.npmjs.org/dstructs-matrix/-/dstructs-matrix-2.1.2.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "kgryte",
+      "email": "kgryte@gmail.com"
+    },
+    {
+      "name": "planeshifter",
+      "email": "pgb@andrew.cmu.edu"
+    }
+  ],
+  "directories": {}
+}
