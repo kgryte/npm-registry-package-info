@@ -42,8 +42,8 @@ function clbk( error, data ) {
 	/*
 		{
 			"meta": {
-				"total": 5,
-				"success": 4,
+				"total": 4,
+				"success": 3,
 				"failure": 1
 			},
 			"data": {
