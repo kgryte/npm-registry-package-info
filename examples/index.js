@@ -15,7 +15,7 @@ function onList( error, list ) {
 		throw error;
 	}
 	if ( !list.length ) {
-		return {};
+		return;
 	}
 	opts = {
 		'packages': list
