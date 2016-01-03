@@ -42,6 +42,8 @@
     "utils",
     "util",
     "package",
+    "registry",
+    "meta",
     "pkg",
     "get"
   ],
