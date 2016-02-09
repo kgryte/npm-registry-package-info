@@ -54,6 +54,7 @@ function clbk( error, data ) {
 			"failures": {
 				"unknown_package_name": "Not Found"
 			}
+		}
 	*/
 }
 ```
