@@ -42,7 +42,7 @@ args = parseArgs( process.argv.slice( 2 ), opts );
 // HELP //
 
 function onClose() {
-	process.exit( 1 );
+	process.exit( 0 );
 }
 
 if ( args.help ) {
