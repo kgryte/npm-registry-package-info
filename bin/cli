@@ -5,17 +5,16 @@
 
 var fs = require( 'fs' );
 var path = require( 'path' );
-var pkginfo = require( 'pkginfo' );
 var parseArgs = require( 'minimist' );
 var notifier = require( 'update-notifier' );
 var opts = require( './opts.json' );
+var pkg = require( './../package.json' );
 var get = require( './../lib' );
 
 
 // VARIABLES //
 
 var args;
-var pkg;
 
 
 // INIT //
@@ -25,13 +24,12 @@ process.stdout.on( 'error', process.exit );
 
 // PACKAGE INFO //
 
-pkg = pkginfo.read( require.main );
-process.title = pkg.package.name;
+process.title = pkg.name;
 
 
 // PACKAGE UPDATES //
 
-notifier( { 'pkg': pkg.package } ).notify();
+notifier( { 'pkg': pkg } ).notify();
 
 
 // ARGUMENTS //
@@ -56,7 +54,7 @@ if ( args.help ) {
 // VERSION //
 
 if ( args.version ) {
-	console.log( pkg.package.version );
+	console.log( pkg.version );
 	return;
 }
 
@@ -98,11 +96,11 @@ function clbk( error, results ) {
 	}
 	len = Object.keys( results.data ).length;
 	if ( len ) {
-		process.stdout.write( JSON.stringify( results.data ), 'utf8' );
+		process.stdout.write( JSON.stringify( results.data )+'\n', 'utf8' );
 	}
 	len = Object.keys( results.failures ).length;
 	if ( len ) {
-		process.sterr.write( JSON.stringify( results.failures ), 'utf8' );
+		process.stderr.write( JSON.stringify( results.failures )+'\n', 'utf8' );
 	}
 	process.exit( 0 );
 } // end FUNCTION clbk()

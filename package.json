@@ -53,10 +53,9 @@
   "dependencies": {
     "debug": "^2.2.0",
     "minimist": "^1.2.0",
-    "pkginfo": "^0.3.1",
     "update-notifier": "^0.6.0",
     "utils-json-parse": "^1.0.0",
-    "utils-merge2": "^1.0.0",
+    "utils-merge2": "^2.0.0",
     "validate.io-boolean-primitive": "^1.0.0",
     "validate.io-function": "^1.0.2",
     "validate.io-nonnegative-integer": "^1.0.0",
@@ -66,7 +65,7 @@
   },
   "devDependencies": {
     "@kgryte/noop": "^1.0.0",
-    "browserify": "12.x.x",
+    "browserify": "13.x.x",
     "chai": "3.x.x",
     "codecov.io": "^0.1.5",
     "istanbul": "^0.4.1",
