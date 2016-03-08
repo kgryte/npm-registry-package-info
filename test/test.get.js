@@ -46,6 +46,33 @@ test( 'function returns an error to a provided callback if an application-level 
 	}
 });
 
+test( 'function returns an error to a provided callback if an application-level error is encountered when fetching package info (callback only called once)', function test( t ) {
+	var opts;
+	var get;
+
+	get = proxyquire( './../lib/get.js', {
+		'./request.js': request
+	});
+
+	opts = getOpts();
+	opts.packages.push( 'math-io/erf' );
+
+	get( opts, done );
+
+	function request( name, opts, clbk ) {
+		setTimeout( onTimeout, 0 );
+		function onTimeout() {
+			clbk( new Error( 'beep' ) );
+		}
+	}
+
+	function done( error ) {
+		t.ok( error instanceof Error, 'error instance' );
+		t.equal( error.message, 'beep' );
+		t.end();
+	}
+});
+
 test( 'the function returns a JSON object upon attempting to resolve all specified packages', function test( t ) {
 	var opts;
 	var get;
