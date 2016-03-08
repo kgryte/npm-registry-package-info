@@ -1,6 +1,6 @@
 {
   "name": "npm-registry-package-info",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Get package info for one or more packages.",
   "author": {
     "name": "Athan Reines",
